@@ -1,4 +1,9 @@
-/* line 1, ../sass/style.scss */
-h2 {
-  font-size: 200%;
+/* line 3, ../sass/style.scss */
+html {
+  background-color: #fbeeee;
+}
+
+/* line 7, ../sass/style.scss */
+body {
+  text-align: center;
 }
