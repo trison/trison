@@ -1,9 +1,11 @@
-/* line 3, ../sass/style.scss */
-html {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 6, ../sass/style.scss */
+html, .container-fluid {
   background-color: #fbeeee;
 }
 
-/* line 7, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 body {
+  font-family: Open Sans, sans-serif;
   text-align: center;
 }
