@@ -3,12 +3,28 @@
 $font: Open Sans, sans-serif;
 $bgColor: #fbeeee;
 
-html, .container-fluid{
+html, body{
 	background-color: $bgColor;
 }
 
 body{
 	font-family: $font;
+	font-size: 16px;
 	text-align: center;
 }
 
+#card{
+	opacity: 0;
+	background-color: #fbfbfb;
+	min-width: 350px;
+	margin-top: 5%;
+	border: 1px solid grey;
+	border-radius: 2px;
+	box-shadow: 5px 5px 0px grey;
+	padding: 1%;
+	h1{ margin-top: 0; }
+}
+
+#contact{
+	margin-top: 10%;
+}

@@ -1,11 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /* line 6, ../sass/style.scss */
-html, .container-fluid {
+html, body {
   background-color: #fbeeee;
 }
 
 /* line 10, ../sass/style.scss */
 body {
   font-family: Open Sans, sans-serif;
+  font-size: 16px;
   text-align: center;
+}
+
+/* line 16, ../sass/style.scss */
+#card {
+  opacity: 0;
+  background-color: #fbfbfb;
+  min-width: 350px;
+  margin-top: 5%;
+  border: 1px solid grey;
+  border-radius: 2px;
+  box-shadow: 5px 5px 0px grey;
+  padding: 1%;
+}
+/* line 25, ../sass/style.scss */
+#card h1 {
+  margin-top: 0;
+}
+
+/* line 28, ../sass/style.scss */
+#contact {
+  margin-top: 10%;
 }
