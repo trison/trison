@@ -68,8 +68,9 @@ ul li {
   opacity: 0;
   width: 370px;
   height: 118px;
-  border-radius: 1px;
-  background-color: black;
+  background-image: url("../assets/img/jeff.jpg");
+  border: 1px solid grey;
+  border-radius: 2px;
   position: absolute;
   z-index: 2;
 }
@@ -77,4 +78,16 @@ ul li {
 /* line 66, ../sass/style.scss */
 #contact {
   margin-top: 10%;
+  animation-duration: 1s;
+  animation-name: slideIn;
+  margin-left: 10%;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 10%;
+  }
 }

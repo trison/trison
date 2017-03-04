@@ -6,7 +6,7 @@ function fade(){
 	card.style.opacity = "1";
 
 	var underCard = document.getElementById("under-card");
-	underCard.style.transition = "opacity 3s";
+	underCard.style.transition = "opacity 3.5s";
 	underCard.style.opacity = "1";
 }
 
@@ -37,6 +37,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheat() {
- 	document.body.style.backgroundImage = "url('img/homer.jpg')";
+ 	document.body.style.backgroundImage = "url('assets/img/homer.jpg')";
 	document.body.style.height="900px";
 }
