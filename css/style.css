@@ -1,40 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-/* line 6, ../sass/style.scss */
+/* line 8, ../sass/style.scss */
 html, body {
   background-color: #fbeeee;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 body {
   font-family: Open Sans, sans-serif;
   font-size: 16px;
   text-align: center;
 }
 
-/* line 15, ../sass/style.scss */
-a {
+/* line 17, ../sass/style.scss */
+a, a:visited {
   color: #545454;
   transition: color 0.2s;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
 }
-/* line 21, ../sass/style.scss */
-a:hover {
+/* line 24, ../sass/style.scss */
+a:hover, a:visited:hover {
   text-decoration: none;
   color: orange;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 ul {
   list-style-type: none;
 }
-/* line 29, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 ul li {
   text-align: left;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 #card-container {
   width: 370px;
   height: 118px;
@@ -42,7 +42,7 @@ ul li {
   margin-top: 5%;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 #card {
   opacity: 0;
   background-color: #fbfbfb;
@@ -58,12 +58,12 @@ ul li {
   z-index: 3;
   position: absolute;
 }
-/* line 50, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 #card h1 {
   margin-top: 0;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 #under-card {
   opacity: 0;
   width: 370px;
@@ -75,12 +75,33 @@ ul li {
   z-index: 2;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #contact {
   margin-top: 10%;
   animation-duration: 1s;
   animation-name: slideIn;
   margin-left: 10%;
+}
+
+/* line 76, ../sass/style.scss */
+#portfolio {
+  color: #545454;
+  padding: 10%;
+}
+/* line 79, ../sass/style.scss */
+#portfolio .thumb {
+  border: 1px solid grey;
+}
+/* line 81, ../sass/style.scss */
+#portfolio .thumb:hover {
+  background-color: orange;
+}
+
+/* line 87, ../sass/style.scss */
+#content {
+  height: 250px;
+  border: 1px solid grey;
+  color: red;
 }
 
 @keyframes slideIn {

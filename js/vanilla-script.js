@@ -10,6 +10,10 @@ function fade(){
 	underCard.style.opacity = "1";
 }
 
+
+function showContent(){
+	document.getElementById("content").innerHTML = "<p>this is site 1 info</p>";
+}
 /*** KONAMI CODE ***/
 var allowedKeys = {
  	37: 'left',

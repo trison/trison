@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $font: Open Sans, sans-serif;
+$fontColor: #545454;
 $bgColor: #fbeeee;
+
 
 html, body{
 	background-color: $bgColor;
@@ -12,12 +14,13 @@ body{
 	font-size: 16px;
 	text-align: center;
 }
-a{
-	color: #545454;
+a, a:visited{
+	color: $fontColor;
 	transition: color 0.2s;
 	-webkit-transition: color 0.2s;
 	-moz-transition: color 0.2s;
 	-o-transition: color 0.2s;
+
 	&:hover{
 		text-decoration: none;
 		color: orange;
@@ -68,6 +71,23 @@ ul{
 	animation-duration: 1s;
 	animation-name: slideIn;
 	margin-left: 10%;
+}
+	
+#portfolio{
+	color: $fontColor;
+	padding: 10%;
+	.thumb{
+		border: 1px solid grey;
+		&:hover{
+			background-color: orange;
+		}
+	}
+}
+
+#content{
+		height: 250px;
+		border: 1px solid grey;
+		color: red;
 }
 
 @keyframes slideIn{
