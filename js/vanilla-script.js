@@ -10,10 +10,25 @@ function fade(){
 	underCard.style.opacity = "1";
 }
 
-
-function showContent(){
-	document.getElementById("content").innerHTML = "<p>this is site 1 info</p>";
+function showContent(site){
+	switch(site){
+		case 'site1':
+			document.getElementById("portfolio-full").innerHTML = "<p>this is site 1 info</p>";
+			break;
+		case "site2":
+			document.getElementById("portfolio-full").innerHTML = "<p>this is site 2 info</p>";
+			break;
+		case "site3":
+			document.getElementById("portfolio-full").innerHTML = "<p>this is site 3 info</p>";
+			break;
+		case "site4":
+			document.getElementById("portfolio-full").innerHTML = "<p>this is site 4 info</p>";
+			break;
+		default:
+			break;
+	}
 }
+
 /*** KONAMI CODE ***/
 var allowedKeys = {
  	37: 'left',

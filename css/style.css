@@ -31,7 +31,7 @@ ul {
 }
 /* line 32, ../sass/style.scss */
 ul li {
-  text-align: left;
+  display: inline;
 }
 
 /* line 36, ../sass/style.scss */
@@ -77,31 +77,40 @@ ul li {
 
 /* line 69, ../sass/style.scss */
 #contact {
-  margin-top: 10%;
   animation-duration: 1s;
   animation-name: slideIn;
-  margin-left: 10%;
 }
 
-/* line 76, ../sass/style.scss */
-#portfolio {
+/* line 74, ../sass/style.scss */
+#portfolio-summary {
   color: #545454;
-  padding: 10%;
+}
+/* line 76, ../sass/style.scss */
+#portfolio-summary h4 {
+  margin-top: 0;
 }
 /* line 79, ../sass/style.scss */
-#portfolio .thumb {
-  border: 1px solid grey;
+#portfolio-summary .thumb {
+  background-color: lightgrey;
+  white-space: normal;
+  margin: 1% 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  transition: background-color 0.4s;
 }
-/* line 81, ../sass/style.scss */
-#portfolio .thumb:hover {
+/* line 87, ../sass/style.scss */
+#portfolio-summary .thumb:hover {
   background-color: orange;
 }
 
-/* line 87, ../sass/style.scss */
-#content {
+/* line 93, ../sass/style.scss */
+#portfolio-full {
+  margin-top: 5%;
   height: 250px;
   border: 1px solid grey;
-  color: red;
+  color: white;
+  background-color: #595a75;
 }
 
 @keyframes slideIn {

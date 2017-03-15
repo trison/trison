@@ -30,7 +30,7 @@ a, a:visited{
 ul{
 	list-style-type: none;
 	li{
-		text-align: left;
+		display: inline;
 	}
 }
 #card-container{
@@ -67,27 +67,35 @@ ul{
 }
 
 #contact{
-	margin-top: 10%;
 	animation-duration: 1s;
 	animation-name: slideIn;
-	margin-left: 10%;
 }
 	
-#portfolio{
+#portfolio-summary{
 	color: $fontColor;
-	padding: 10%;
+	h4{
+		margin-top: 0;
+	}
 	.thumb{
-		border: 1px solid grey;
+		background-color: lightgrey;
+		white-space: normal;
+		margin: 1% 0;
+		width: 150px;
+		height: 150px;
+		border-radius: 3px;
+		transition: background-color 0.4s;	
 		&:hover{
 			background-color: orange;
 		}
 	}
 }
 
-#content{
+#portfolio-full{
+		margin-top: 5%;
 		height: 250px;
 		border: 1px solid grey;
-		color: red;
+		color: white;
+		background-color: #595a75;
 }
 
 @keyframes slideIn{
