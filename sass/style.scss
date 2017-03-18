@@ -88,6 +88,20 @@ ul{
 			background-color: orange;
 		}
 	}
+	.ay{text-align: center;
+	.overlay{
+		position: absolute;
+		display: block;	
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	}
+	input[type=button]{
+		transition: color 0.3s;		
+		&:hover{
+			color: red;
+		}
+	}
 }
 
 #portfolio-full{
@@ -98,11 +112,12 @@ ul{
 		background-color: #595a75;
 }
 
+
 @keyframes slideIn{
 	from{
 		margin-left: 100%;
 	}
 	to{
-		margin-left: 10%;
+		margin-left: 0;
 	}
 }

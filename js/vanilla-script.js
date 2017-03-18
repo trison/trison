@@ -13,7 +13,7 @@ function fade(){
 function showContent(site){
 	switch(site){
 		case 'site1':
-			document.getElementById("portfolio-full").innerHTML = "<p>this is site 1 info</p>";
+			document.getElementById("portfolio-full").innerHTML = "<p>Updated Open Space's look and functionality.</p>";
 			break;
 		case "site2":
 			document.getElementById("portfolio-full").innerHTML = "<p>this is site 2 info</p>";
@@ -25,6 +25,28 @@ function showContent(site){
 			document.getElementById("portfolio-full").innerHTML = "<p>this is site 4 info</p>";
 			break;
 		default:
+			break;
+	}
+}
+
+function changeValue(site){
+	document.getElementById(site).value = "Read More";
+}
+function resetValue(site){
+	switch(site){
+		case 'site1':
+			document.getElementById(site).value = "Open Space";
+			break;
+		case 'site2':
+			document.getElementById(site).value = "Ding Dong Delivery";
+			break;
+		case 'site3':
+			document.getElementById(site).value = "the fifty fifty arts collective";
+			break;
+		case 'site4':
+			document.getElementById(site).value = "Compost Education Centre";
+			break;
+		default: 
 			break;
 	}
 }

@@ -103,8 +103,27 @@ ul li {
 #portfolio-summary .thumb:hover {
   background-color: orange;
 }
+/* line 91, ../sass/style.scss */
+#portfolio-summary .ay {
+  text-align: center;
+}
+/* line 92, ../sass/style.scss */
+#portfolio-summary .ay .overlay {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 99, ../sass/style.scss */
+#portfolio-summary input[type=button] {
+  transition: color 0.3s;
+}
+/* line 101, ../sass/style.scss */
+#portfolio-summary input[type=button]:hover {
+  color: red;
+}
 
-/* line 93, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 #portfolio-full {
   margin-top: 5%;
   height: 250px;
@@ -118,6 +137,6 @@ ul li {
     margin-left: 100%;
   }
   to {
-    margin-left: 10%;
+    margin-left: 0;
   }
 }

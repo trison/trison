@@ -42,40 +42,79 @@
 		</div>
 	</div>
 
-	<div class="row" style="margin-top: 2%;">
-		<div id="contact" class="col-sm-12">
-			<ul>
-			<li><a href="mailto:trison.ng@gmail.com?Subject=Hello">trison.ng@gmail.com</a></li>
-			<li><a target="_blank"href="https://github.com/trison">github</a></li>
-			<li><a target="_blank" href="https://www.facebook.com/trison.ng">facebook</a></li>
-			<li><a target="_blank" href="https://www.instagram.com/trisonn/">instagram</a></li>
+	<div class="row" style="margin-top: 7%;">
+		<div class="col-sm-12">
+			<ul id="contact">
+			<li class="col-sm-2"></li>
+			<li class="col-sm-2"><a href="mailto:trison.ng@gmail.com?Subject=Hello">trison.ng@gmail.com</a></li>
+			<li class="col-sm-2"></li>
+			<li class="col-sm-1"><a target="_blank"href="https://github.com/trison">github</a></li>
+			<li class="col-sm-1"><a target="_blank" href="https://www.facebook.com/trison.ng">facebook</a></li>
+			<li class="col-sm-1"><a target="_blank" href="https://www.instagram.com/trisonn/">instagram</a></li>
+			<li class="col-sm-3"></li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="row" style="margin-top: 10%;">
 		<div id="portfolio-summary" class="col-sm-12">
-			<h4>latest work</h4>
+			<div class="row" style="margin-bottom: 2%;">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" style="border-bottom: 1px solid lightgrey;"><h4>latest work</h4></div>
+				<div class="col-sm-3"></div>
+			</div>
 			<div class="row">
-				<form action="">	
-				<div class="col-sm-3">
-					<input type="button" class="thumb" value="Open Space" onclick="showContent('site1');">
+				<form name="form" id="form" action="#">
+				<div class="col-sm-2"></div>	
+				<div class="col-sm-2" >
+					<input id="site1" 
+					type="button" 
+					class="thumb ay" 
+					value="Open Space" 
+					onmouseover="changeValue('site1');" 
+					onmouseleave="resetValue('site1');"
+					onclick="showContent('site1');">
 				</div>
-				<div class="col-sm-3">
-					<input type="button" class="thumb" value="Ding Dong Delivery" onclick="showContent('site2');">
+				<div class="col-sm-2">
+					<input id="site2"
+					type="button"
+					class="thumb ay"
+					value="Ding Dong Delivery" 
+					onmouseover="changeValue('site2');" 
+					onmouseleave="resetValue('site2');"
+					onclick="showContent('site2');">
 				</div>
-				<div class="col-sm-3">
-					<input type="button" class="thumb" value="the fifty fifty arts collective" onclick="showContent('site3');">
+				<div class="col-sm-2">
+					<input id="site3" 
+					type="button" 
+					class="thumb" 
+					value="the fifty fifty arts collective" 
+					onmouseover="changeValue('site3');" 
+					onmouseleave="resetValue('site3');"
+					onclick="showContent('site3');">
 				</div>
-				<div class="col-sm-3">
-					<input type="button" class="thumb" value="Compost Education Centre" onclick="showContent('site4');">
+				<div class="col-sm-2">
+					<input id="site4" 
+					type="button" 
+					class="thumb" 
+					value="Compost Education Centre" 
+					onmouseover="changeValue('site4');" 
+					onmouseleave="resetValue('site4');"
+					onclick="showContent('site4');">
 				</div>
+				<div class="col-sm-2"></div>	
 				</form>
 			</div>
 		</div>
 	</div>
-
-	<div id="portfolio-full" class="row">ayooo</div>
+	
+	<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<div id="portfolio-full" class="row">ayooo</div>
+	</div>
+	<div class="col-sm-1"></div>
+	</div>
 
 	<!-- Javascript -->
 	<script src="js/vanilla-script.js"></script>
