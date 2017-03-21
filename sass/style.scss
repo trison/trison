@@ -4,7 +4,6 @@ $font: Open Sans, sans-serif;
 $fontColor: #545454;
 $bgColor: #fbeeee;
 
-
 html, body{
 	background-color: $bgColor;
 }
@@ -20,7 +19,6 @@ a, a:visited{
 	-webkit-transition: color 0.2s;
 	-moz-transition: color 0.2s;
 	-o-transition: color 0.2s;
-
 	&:hover{
 		text-decoration: none;
 		color: orange;
@@ -34,7 +32,7 @@ ul{
 	}
 }
 #card-container{
-	width: 370px;
+	width: 365px;
 	height: 118px;
 	margin: 0 auto;
 	margin-top: 5%;
@@ -42,7 +40,7 @@ ul{
 #card{
 	opacity: 0;
 	background-color: #fbfbfb;
-	width: 370px;
+	width: 365px;
 	height: 118px;
 	border: 1px solid grey;
 	border-radius: 2px;
@@ -57,7 +55,7 @@ ul{
 }
 #under-card{
 	opacity: 0;
-	width: 370px;
+	width: 365px;
 	height: 118px;
 	background-image: url("../assets/img/jeff.jpg");
 	border: 1px solid grey;
@@ -66,8 +64,8 @@ ul{
 	z-index: 2;
 }
 
-#contact{
-	animation-duration: 1s;
+.contact{
+	animation-duration: 0.8s;
 	animation-name: slideIn;
 }
 	
@@ -80,38 +78,40 @@ ul{
 		background-color: lightgrey;
 		white-space: normal;
 		margin: 1% 0;
-		width: 150px;
-		height: 150px;
+		width: 200px;
+		height: 200px;
 		border-radius: 3px;
-		transition: background-color 0.4s;	
+		transition: background-color 0.3s, color 0.4s;	
 		&:hover{
-			background-color: orange;
+			background-color: darkgrey;
 		}
 	}
-	.ay{text-align: center;
-	.overlay{
-		position: absolute;
-		display: block;	
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	}
 	input[type=button]{
-		transition: color 0.3s;		
 		&:hover{
-			color: red;
+			animation-duration: 0.8s;
+			color: white;
 		}
 	}
 }
-
+#site1, #site2, #site3, #site4{
+	color: lightgrey;
+}
 #portfolio-full{
 		margin-top: 5%;
 		height: 250px;
 		border: 1px solid grey;
 		color: white;
 		background-color: #595a75;
+	#contents{
+		position: relative;
+		left: -999px;
+		right: 0;
+		transition: left 0.5s linear, right 0.5s linear;
+	}
 }
-
+.active{
+	//this class exists to mark which site is currently showing in the portfolio section
+}
 
 @keyframes slideIn{
 	from{

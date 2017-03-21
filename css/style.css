@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-/* line 8, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 html, body {
   background-color: #fbeeee;
 }
 
-/* line 12, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 body {
   font-family: Open Sans, sans-serif;
   font-size: 16px;
   text-align: center;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
 a, a:visited {
   color: #545454;
   transition: color 0.2s;
@@ -19,34 +19,34 @@ a, a:visited {
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
 }
-/* line 24, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 a:hover, a:visited:hover {
   text-decoration: none;
   color: orange;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 ul {
   list-style-type: none;
 }
-/* line 32, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 ul li {
   display: inline;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 #card-container {
-  width: 370px;
+  width: 365px;
   height: 118px;
   margin: 0 auto;
   margin-top: 5%;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 #card {
   opacity: 0;
   background-color: #fbfbfb;
-  width: 370px;
+  width: 365px;
   height: 118px;
   border: 1px solid grey;
   border-radius: 2px;
@@ -58,15 +58,15 @@ ul li {
   z-index: 3;
   position: absolute;
 }
-/* line 53, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 #card h1 {
   margin-top: 0;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 #under-card {
   opacity: 0;
-  width: 370px;
+  width: 365px;
   height: 118px;
   background-image: url("../assets/img/jeff.jpg");
   border: 1px solid grey;
@@ -75,61 +75,59 @@ ul li {
   z-index: 2;
 }
 
-/* line 69, ../sass/style.scss */
-#contact {
-  animation-duration: 1s;
+/* line 67, ../sass/style.scss */
+.contact {
+  animation-duration: 0.8s;
   animation-name: slideIn;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 #portfolio-summary {
   color: #545454;
 }
-/* line 76, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 #portfolio-summary h4 {
   margin-top: 0;
 }
-/* line 79, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 #portfolio-summary .thumb {
   background-color: lightgrey;
   white-space: normal;
   margin: 1% 0;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 3px;
-  transition: background-color 0.4s;
+  transition: background-color 0.3s, color 0.4s;
 }
-/* line 87, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #portfolio-summary .thumb:hover {
-  background-color: orange;
+  background-color: darkgrey;
 }
-/* line 91, ../sass/style.scss */
-#portfolio-summary .ay {
-  text-align: center;
-}
-/* line 92, ../sass/style.scss */
-#portfolio-summary .ay .overlay {
-  position: absolute;
-  display: block;
-  top: 50%;
-  transform: translateY(-50%);
-}
-/* line 99, ../sass/style.scss */
-#portfolio-summary input[type=button] {
-  transition: color 0.3s;
-}
-/* line 101, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 #portfolio-summary input[type=button]:hover {
-  color: red;
+  animation-duration: 0.8s;
+  color: white;
 }
 
-/* line 107, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
+#site1, #site2, #site3, #site4 {
+  color: lightgrey;
+}
+
+/* line 99, ../sass/style.scss */
 #portfolio-full {
   margin-top: 5%;
   height: 250px;
   border: 1px solid grey;
   color: white;
   background-color: #595a75;
+}
+/* line 105, ../sass/style.scss */
+#portfolio-full #contents {
+  position: relative;
+  left: -999px;
+  right: 0;
+  transition: left 0.5s linear, right 0.5s linear;
 }
 
 @keyframes slideIn {

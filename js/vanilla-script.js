@@ -1,5 +1,6 @@
 //fade in card
 window.onload = fade;
+
 function fade(){
 	var card = document.getElementById("card");
 	card.style.transition = "opacity 0.6s";
@@ -9,47 +10,67 @@ function fade(){
 	underCard.style.transition = "opacity 3.5s";
 	underCard.style.opacity = "1";
 }
-
-function showContent(site){
+function changeValue(site){
+	document.getElementById(site).value = "Details";
+}
+function resetValue(site){
+	var s = document.getElementById(site)
 	switch(site){
 		case 'site1':
-			document.getElementById("portfolio-full").innerHTML = "<p>Updated Open Space's look and functionality.</p>";
+			s.value = "Open Space";
+			break;
+		case 'site2':
+			s.value = "Ding Dong Delivery";
+			break;
+		case 'site3':
+			s.value = "the fifty fifty arts collective";
+			break;
+		case 'site4':
+			s.value = "Compost Education Centre";
+			break;
+		default: 
+			break;
+	}
+}
+function showContent(site){
+	var portfolio = document.getElementById("contents");
+	switch(site){
+		case 'site1':
+			portfolio.innerHTML = "<p>Updated Open Space's look and functionality.</p>";
 			break;
 		case "site2":
-			document.getElementById("portfolio-full").innerHTML = "<p>this is site 2 info</p>";
+			portfolio.innerHTML = "<p>this is site 2 info</p>";
 			break;
 		case "site3":
-			document.getElementById("portfolio-full").innerHTML = "<p>this is site 3 info</p>";
+			portfolio.innerHTML = "<p>this is site 3 info</p>";
 			break;
 		case "site4":
-			document.getElementById("portfolio-full").innerHTML = "<p>this is site 4 info</p>";
+			portfolio.innerHTML = "<p>this is site 4 info</p>";
 			break;
 		default:
 			break;
 	}
 }
 
-function changeValue(site){
-	document.getElementById(site).value = "Read More";
-}
-function resetValue(site){
-	switch(site){
-		case 'site1':
-			document.getElementById(site).value = "Open Space";
-			break;
-		case 'site2':
-			document.getElementById(site).value = "Ding Dong Delivery";
-			break;
-		case 'site3':
-			document.getElementById(site).value = "the fifty fifty arts collective";
-			break;
-		case 'site4':
-			document.getElementById(site).value = "Compost Education Centre";
-			break;
-		default: 
-			break;
+var x = document.getElementById("site1");
+
+x.addEventListener("click", function(){
+	var portfolio = document.getElementById("contents");
+	var active = portfolio.classList.contains("active");	
+	console.log("active = "+active);
+	if (active == true){
+		console.log("yep");
+		portfolio.setAttribute("style", "left: -999px");
+		portfolio.classList.remove("active");
 	}
-}
+	if(active == false){
+		console.log("heh");
+		portfolio.setAttribute("style", "left: 0");
+		portfolio.className="active";
+	}
+})
+
+
 
 /*** KONAMI CODE ***/
 var allowedKeys = {
