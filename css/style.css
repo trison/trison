@@ -125,9 +125,8 @@ ul li {
 /* line 105, ../sass/style.scss */
 #portfolio-full #contents {
   position: relative;
-  left: -999px;
-  right: 0;
-  transition: left 0.5s linear, right 0.5s linear;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 @keyframes slideIn {
