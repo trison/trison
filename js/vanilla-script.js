@@ -1,12 +1,8 @@
-//fade in card
 window.onload = fade;
 
-var activeSite = [];
-for(var i=0; i<4; i++){
-	activeSite.push(false);
-}
-
 var activeFlag = false;
+var activeSite = [];
+for(var i=0; i<4; i++){ activeSite.push(false); }
 
 function fade(){
 	var card = document.getElementById("card");
@@ -19,25 +15,17 @@ function fade(){
 }
 
 function changeValue(site){
-	document.getElementById(site).value = "Details";
+	document.getElementById(site).value = "See details";
 }
+
 function resetValue(site){
 	var s = document.getElementById(site)
 	switch(site){
-		case 'site1':
-			s.value = "Open Space";
-			break;
-		case 'site2':
-			s.value = "Ding Dong Delivery";
-			break;
-		case 'site3':
-			s.value = "the fifty fifty arts collective";
-			break;
-		case 'site4':
-			s.value = "Compost Education Centre";
-			break;
-		default: 
-			break;
+		case 'site1': s.value = "Open Space"; break;
+		case 'site2': s.value = "Ding Dong Delivery"; break;
+		case 'site3': s.value = "the fifty fifty arts collective"; break;
+		case 'site4': s.value = "Compost Education Centre"; break;
+		default: break;
 	}
 }
 
@@ -59,9 +47,9 @@ function showContent(site){
 		activeSite[currSite] = true;
 	}
 	else{
-		for(var activeIndex=0; activeIndex<activeSite.length; activeIndex++){
-			if (activeSite[activeIndex] == true){
-				oldSite = activeIndex;
+		for(var i=0; i<activeSite.length; i++){
+			if (activeSite[i] == true){
+				oldSite = i;
 				break;
 			}
 		}
@@ -69,39 +57,36 @@ function showContent(site){
 		activeSite[oldSite] = false;
 		activeSite[currSite] = true;
 
-		if (currSite == oldSite){
-			return;
-		}
+		if (currSite == oldSite){ return; }
 	}
 	
 	var portfolio = document.getElementById("contents");
 	if (oldSite != null){
-		console.log("oldSite = "+oldSite);
 		portfolio.setAttribute("style", "opacity: 0");	
 	}
 
 	switch(site){
 		case 'site1':
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>Updated Open Space's look and functionality.</p>";
+				portfolio.innerHTML = "<p>Updated Open Space's look and functionality.<br><br><a href='http://openspace.ca/'>openspace.ca</a></p>";
 				portfolio.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site2":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>this is site 2 info</p>";
+				portfolio.innerHTML = "<p>Full stack development using MEAN: <br>MongoDB <br>Express <br>Angular <br>Node</p>";
 				portfolio.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site3":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>this is site 3 info</p>";
+				portfolio.innerHTML = "<p>Front end redesign</p>";
 				portfolio.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site4":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>this is site 4 info</p>";
+				portfolio.innerHTML = "<p>Front end redesign</p>";
 				portfolio.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
@@ -127,7 +112,7 @@ document.addEventListener('keydown', function(e) {
 	var key = allowedKeys[e.keyCode];
 	var requiredKey = konamiCode[konamiCodePosition];
 
-	// compare entered  key with required key
+	// compare entered key with required key
 	if (key == requiredKey) {
 		konamiCodePosition++;
 		if (konamiCodePosition == konamiCode.length)

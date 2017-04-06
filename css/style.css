@@ -1,17 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /* line 7, ../sass/style.scss */
 html, body {
-  background-color: #fbeeee;
+  background: linear-gradient(90deg, #fbeeee, white);
 }
 
-/* line 11, ../sass/style.scss */
+/* line 13, ../sass/style.scss */
 body {
   font-family: Open Sans, sans-serif;
   font-size: 16px;
   text-align: center;
 }
+/* line 17, ../sass/style.scss */
+body #hero {
+  height: 100vh;
+}
 
-/* line 16, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 a, a:visited {
   color: #545454;
   transition: color 0.2s;
@@ -19,22 +23,18 @@ a, a:visited {
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
 }
-/* line 22, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 a:hover, a:visited:hover {
   text-decoration: none;
   color: orange;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 ul {
   list-style-type: none;
 }
-/* line 30, ../sass/style.scss */
-ul li {
-  display: inline;
-}
 
-/* line 34, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 #card-container {
   width: 365px;
   height: 118px;
@@ -42,7 +42,7 @@ ul li {
   margin-top: 5%;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 #card {
   opacity: 0;
   background-color: #fbfbfb;
@@ -54,16 +54,17 @@ ul li {
   -webkit-box-shadow: 5px 5px 0px grey;
   -moz-box-shadow: 5px 5px 0px grey;
   padding: 1%;
-  cursor: move;
+  cursor: grab;
+  cursor: -webkit-grab;
   z-index: 3;
   position: absolute;
 }
-/* line 51, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 #card h1 {
   margin-top: 0;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 #under-card {
   opacity: 0;
   width: 365px;
@@ -75,21 +76,31 @@ ul li {
   z-index: 2;
 }
 
-/* line 67, ../sass/style.scss */
-.contact {
+/* line 73, ../sass/style.scss */
+#hello {
+  line-height: 200%;
+  text-align: left;
   animation-duration: 0.8s;
   animation-name: slideIn;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
+#contact {
+  line-height: 200%;
+  text-align: right;
+  animation-duration: 0.8s;
+  animation-name: slideIn;
+}
+
+/* line 85, ../sass/style.scss */
 #portfolio-summary {
   color: #545454;
 }
-/* line 74, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #portfolio-summary h4 {
   margin-top: 0;
 }
-/* line 77, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 #portfolio-summary .thumb {
   background-color: lightgrey;
   white-space: normal;
@@ -99,41 +110,53 @@ ul li {
   border-radius: 3px;
   transition: background-color 0.3s, color 0.4s;
 }
-/* line 85, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 #portfolio-summary .thumb:hover {
   background-color: darkgrey;
 }
-/* line 90, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 #portfolio-summary input[type=button]:hover {
   animation-duration: 0.8s;
   color: white;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 #site1, #site2, #site3, #site4 {
   color: lightgrey;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 #portfolio-full {
   margin-top: 5%;
-  height: 250px;
+  height: 500px;
   border: 1px solid grey;
   color: white;
   background-color: #595a75;
 }
-/* line 105, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 #portfolio-full #contents {
+  text-align: left;
   position: relative;
+  padding: 2%;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.2s;
+}
+/* line 124, ../sass/style.scss */
+#portfolio-full #contents a, #portfolio-full #contents a:visited {
+  color: lightgrey;
+}
+/* line 126, ../sass/style.scss */
+#portfolio-full #contents a:hover, #portfolio-full #contents a:visited:hover {
+  color: orange;
 }
 
 @keyframes slideIn {
   from {
     margin-left: 100%;
+    opacity: 0;
   }
   to {
     margin-left: 0;
+    opacity: 1;
   }
 }
