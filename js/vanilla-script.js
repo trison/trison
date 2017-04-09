@@ -1,5 +1,11 @@
 window.onload = fade;
 
+setTimeout(function(){
+	var scroll = document.getElementById("scroll-down")
+	scroll.style.transition = "opacity 1.5s";
+	scroll.style.opacity="1";
+}, 4000);
+
 var activeFlag = false;
 var activeSite = [];
 for(var i=0; i<4; i++){ activeSite.push(false); }

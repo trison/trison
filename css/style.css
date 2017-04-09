@@ -110,6 +110,7 @@ ul {
 
 /* line 96, ../sass/style.scss */
 #scroll-down {
+  opacity: 0;
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -123,23 +124,26 @@ ul {
   cursor: -webkit-pointer;
   background-color: white;
   transition: background-color 0.5s;
+  animation: jingle 1s infinite;
+  -webkit-animation: jingle 1s infinite;
+  transform-origin: top;
 }
-/* line 110, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 #scroll-down:hover {
   background-color: yellow;
 }
-/* line 113, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #scroll-down .glyphicon {
   margin-top: 25%;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 #portfolio {
   background: linear-gradient(90deg, #fff1d1, #fffcf4);
   padding-top: 3%;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #portfolio-summary {
   color: #545454;
   /*
@@ -149,17 +153,17 @@ ul {
   	#site4{ background: url("../assets/img/site-compost.png"); }
   */
 }
-/* line 125, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 #portfolio-summary h4 {
   margin-top: 0;
   font-size: 25px;
 }
-/* line 130, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #portfolio-summary input[type=button]:hover {
   animation-duration: 0.8s;
   color: white;
 }
-/* line 135, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 #portfolio-summary #site1, #portfolio-summary #site2, #portfolio-summary #site3, #portfolio-summary #site4 {
   background-color: #fff1d1;
   color: #545454;
@@ -171,19 +175,19 @@ ul {
   border-radius: 3px;
   transition: background-color 0.3s, color 0.4s;
 }
-/* line 145, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 #portfolio-summary #site1:hover, #portfolio-summary #site2:hover, #portfolio-summary #site3:hover, #portfolio-summary #site4:hover {
   background-color: white;
 }
 
-/* line 158, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #portfolio-full {
   margin-top: 5%;
   height: 500px;
   border: 1px solid lightgrey;
   background-color: #e1e2ec;
 }
-/* line 163, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 #portfolio-full #contents {
   text-align: left;
   position: relative;
@@ -191,7 +195,7 @@ ul {
   opacity: 0;
   transition: opacity 0.2s;
 }
-/* line 170, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 #portfolio-full #contents a:hover, #portfolio-full #contents a:visited:hover {
   color: orange;
 }
@@ -206,13 +210,30 @@ ul {
     opacity: 1;
   }
 }
+@keyframes jingle {
+  0% {
+    margin-top: 0;
+  }
+  15% {
+    margin-top: 5px;
+  }
+  30% {
+    margin-top: 0;
+  }
+  45% {
+    margin-top: 5px;
+  }
+  70% {
+    margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
-  /* line 189, ../sass/style.scss */
+  /* line 202, ../sass/style.scss */
   #about {
     text-align: center;
     padding: 0 5%;
   }
-  /* line 192, ../sass/style.scss */
+  /* line 205, ../sass/style.scss */
   #about #contact {
     margin-top: 5%;
     text-align: center;
