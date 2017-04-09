@@ -10,6 +10,15 @@ function fade(){
 	card.style.opacity = "1";
 
 	var underCard = document.getElementById("under-card");
+
+	var num = Math.floor(Math.random()*10+1);
+	if (num > 5){
+		underCard.style.backgroundImage = "url('assets/img/home.jpg')";
+	}
+	else{
+		underCard.style.backgroundImage = "url('assets/img/jeff.jpg')";
+	}
+
 	underCard.style.transition = "opacity 3.5s";
 	underCard.style.opacity = "1";
 }

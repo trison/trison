@@ -2,9 +2,18 @@
 
 $font: Open Sans, sans-serif;
 $fontColor: #545454;
+$linkColor: #018fa0;
 $bgColor: #fbeeee;
 
-html, body{
+html{
+	background-color: none;
+}
+.container{
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+body{
 	background: linear-gradient(90deg, $bgColor, white);
 }
 
@@ -18,14 +27,14 @@ body{
 }
 
 a, a:visited{
-	color: $fontColor;
+	color: $linkColor;
 	transition: color 0.2s;
 	-webkit-transition: color 0.2s;
 	-moz-transition: color 0.2s;
 	-o-transition: color 0.2s;
 	&:hover{
 		text-decoration: none;
-		color: orange;
+		color: $fontColor;
 	}
 }
 
@@ -69,9 +78,10 @@ ul{
 	z-index: 2;
 }
 #about{
+	color: $fontColor;
 	text-align: left;
 	line-height: 200%;
-	margin-top: 12%;
+	margin-top: 10%;
 	height: 300px;
 	#hello{
 		animation-duration: 0.8s;
@@ -83,6 +93,28 @@ ul{
 		animation-name: slideIn;
 	}
 }
+#scroll-down{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	border-radius: 50%;
+	box-shadow: 1px 1px 1px grey;
+	-webkiet-box-shadow: 1px 1px 1px grey;
+	cursor: pointer;
+	cursor: -webkit-pointer;
+	background-color: white;
+	transition: background-color 0.5s;
+	&:hover{
+		background-color: yellow;
+	}
+	.glyphicon{
+		margin-top: 25%;
+	}
+}
+
 #portfolio{
 	background: linear-gradient(90deg, #fff1d1, #fffcf4);
 	padding-top: 3%;
@@ -92,19 +124,7 @@ ul{
 	color: $fontColor;
 	h4{
 		margin-top: 0;
-		font-size: 20px;
-	}
-	.thumb{
-		background-color: lightgrey;
-		white-space: normal;
-		margin: 1% 0;
-		width: 200px;
-		height: 200px;
-		border-radius: 3px;
-		transition: background-color 0.3s, color 0.4s;	
-		&:hover{
-			background-color: darkgrey;
-		}
+		font-size: 25px;
 	}
 	input[type=button]{
 		&:hover{
@@ -112,15 +132,33 @@ ul{
 			color: white;
 		}
 	}
+	#site1, #site2, #site3, #site4{
+		background-color: #fff1d1;
+		color: $fontColor; 
+		padding: 1%;
+		white-space: normal;
+		margin: 1% 0;
+		width: 200px;
+		height: 134px;
+		border-radius: 3px;
+		transition: background-color 0.3s, color 0.4s;	
+		&:hover{
+			background-color: white;
+		}
+	}
+/*
+	#site1{ background: url("../assets/img/site-openspace.png"); }
+	#site2{ background: url("../assets/img/site-dingdong.png"); }
+	#site3{ background: url("../assets/img/site-fiftyfifty.png"); }
+	#site4{ background: url("../assets/img/site-compost.png"); }
+*/
 }
-#site1, #site2, #site3, #site4{
-	color: lightgrey;
-}
+
+
 #portfolio-full{
 		margin-top: 5%;
 		height: 500px;
 		border: 1px solid lightgrey;
-		color: white;
 		background-color: #e1e2ec;
 	#contents{
 		text-align: left;
@@ -129,7 +167,6 @@ ul{
 		opacity: 0;
 		transition: opacity 0.2s;
 		a, a:visited{
-			color: lightgrey;
 			&:hover{
 				color: orange;
 			}

@@ -28,18 +28,16 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-<body>
+<body class="container">
 	<div id="hero">
 	<audio loop src="assets/audio/laugh-track.mp3" id="laugh">yr browser can't do audio tags lol</audio>
-	<div class="container">
-		<div class="row">
-			<div id="card-container">
-				<div id="card" class="">
-					<h1>trison nguyen</h1>
-					<h2>web developer :)</h2>
-				</div>
-				<div id="under-card"></div>
+	<div class="row">
+		<div id="card-container">
+			<div id="card" class="">
+				<h1>trison nguyen</h1>
+				<h2>web developer :)</h2>
 			</div>
+			<div id="under-card"></div>
 		</div>
 	</div>
 
@@ -57,16 +55,18 @@
 			</ul>
 		</div>
 		<div class="col-sm-3"></div>
+	</div><!-- hero -->
+	<div class="row">
+		<div class="col-sm-12"><div id="scroll-down"><span class="glyphicon glyphicon-menu-down"></span></div></div>
 	</div>
 	</div>
-
 	<div id="portfolio">
 	<div class="row">
 		<div id="portfolio-summary" class="col-sm-12">
 			<div class="row" style="margin-bottom: 2%;">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8" style="border-bottom: 1px solid grey;"><h4>latest work</h4></div>
-				<div class="col-sm-2"></div>
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6" style="border-bottom: 1px solid lightgrey;"><h4>latest work</h4></div>
+				<div class="col-sm-3"></div>
 			</div>
 			<div class="row">
 				<form name="form" id="form" action="#">
@@ -74,9 +74,7 @@
 				<div class="col-sm-2" >
 					<input id="site1" 
 					type="button" 
-					class="thumb"
-					style="background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('assets/img/site-openspace.png');" 
-					value="Open Space" 
+					value="Open Space"
 					onmouseover="changeValue('site1');" 
 					onmouseleave="resetValue('site1');"
 					onclick="showContent('site1');">
@@ -84,29 +82,23 @@
 				<div class="col-sm-2">
 					<input id="site2"
 					type="button"
-					class="thumb"
-					style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('assets/img/site-dingdong.png');" 
-					value="Ding Dong Delivery" 
+					value="Ding Dong Delivery"
 					onmouseover="changeValue('site2');" 
 					onmouseleave="resetValue('site2');"
 					onclick="showContent('site2');">
 				</div>
 				<div class="col-sm-2">
 					<input id="site3" 
-					type="button" 
-					class="thumb" 
-					style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('assets/img/site-fiftyfifty.png');" 
-					value="the fifty fifty arts collective" 
+					type="button"
+					value="the fifty fifty arts collective"
 					onmouseover="changeValue('site3');" 
 					onmouseleave="resetValue('site3');"
 					onclick="showContent('site3');">
 				</div>
 				<div class="col-sm-2">
 					<input id="site4" 
-					type="button" 
-					class="thumb" 
-					style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('assets/img/site-compost.png');" 
-					value="Compost Education Centre" 
+					type="button"
+					value="Compost Education Centre"
 					onmouseover="changeValue('site4');" 
 					onmouseleave="resetValue('site4');"
 					onclick="showContent('site4');">
