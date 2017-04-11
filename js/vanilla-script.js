@@ -1,14 +1,16 @@
 window.onload = fade;
 
+var activeFlag = false;
+var activeSite = [];
+var openSpaceDesc = "<p>Open Space Arts Society is an artist-run centre in Victoria BC that has been supporting contemporary art practices since 1972. <br><br>I helped develop and launch a new Drupal website. The site received a fresh new look with updated functionality that allowed staff to manage content. <br><br><a href='http://openspace.ca/'>openspace.ca</a></p>";
+
+for(var i=0; i<4; i++){ activeSite.push(false); }
+
 setTimeout(function(){
 	var scroll = document.getElementById("scroll-down")
 	scroll.style.transition = "opacity 1.5s";
 	scroll.style.opacity="1";
 }, 4000);
-
-var activeFlag = false;
-var activeSite = [];
-for(var i=0; i<4; i++){ activeSite.push(false); }
 
 function fade(){
 	var card = document.getElementById("card");
@@ -75,7 +77,7 @@ function showContent(site){
 		if (currSite == oldSite){ return; }
 	}
 	
-	var portfolio = document.getElementById("contents");
+	var portfolio = document.getElementById("contents-text");
 	if (oldSite != null){
 		portfolio.setAttribute("style", "opacity: 0");	
 	}
@@ -83,7 +85,7 @@ function showContent(site){
 	switch(site){
 		case 'site1':
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>Updated Open Space's look and functionality.<br><br><a href='http://openspace.ca/'>openspace.ca</a></p>";
+				portfolio.innerHTML = openSpaceDesc;
 				portfolio.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
