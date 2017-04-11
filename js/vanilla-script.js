@@ -2,12 +2,22 @@ window.onload = fade;
 
 var activeFlag = false;
 var activeSite = [];
-var openSpaceDesc = "<p>Open Space Arts Society is an artist-run centre in Victoria BC that has been supporting contemporary art practices since 1972. <br><br>I helped develop and launch a new Drupal website. The site received a fresh new look with updated functionality that allowed staff to manage content. <br><br><a href='http://openspace.ca/'>openspace.ca</a></p>";
+
+var openSpaceDesc = "<p>Open Space Arts Society is an artist-run centre in Victoria BC that has been supporting contemporary art practices since 1972. <br><br>I helped develop and launch a website using Drupal. The site received a fresh look with updated functionality that allowed Open Space staff to manage and update their own content. <br><br><a href='http://openspace.ca/' target='_blank'>openspace.ca</a></p>";
+var dingDongDesc = "<p>Ding Dong Delivery was a self-directed, entreprenurial co-op project with one other team member. We set out to create a food ordering and delivery system served through a web app and iOS app. <br><br>My focus was on developing the web app that would allow restaurant owners to manage their online restaurant profiles and incoming orders from the iOS app. I created the API, and developed the backend and frontend using MongoDB, ExpressJS, AngularJS and NodeJS <br><br><a href='http://www.dingdongdelivery.ca/' target='_blank'>www.dingdongdelivery.ca</a></p>";
+var fiftyDesc = "the fifty fifty arts collective is a volunteer-run centre that has focused on emerging art since 2003. <br><br>I worked with the collective to refresh the frontend of the website, while keeping it functional with the original backend system and boilerplate that also supports <a href='https://livevictoria.com/' target='_blank'>livevictoria.com</a> and <a href='https://artsvictoria.ca/' target='_blank'>artsvictoria.ca.</a> <br><br><a href='http://thefiftyfifty.net/' target='_blank'>thefiftyfifty.net</a>";
+var compostDesc = "The Compost Education Centre is a non-profit that provides composting and ecological gardening education in Victoria BC. <br><br>I updated their frontend and added content management features to help staff manage their WordPress site. <br><br><a href='https://www.compost.bc.ca/' target='_blank'>compost.bc.ca</a>";
+
+var scroll = document.getElementById("scroll-down")
+var windowHeight = window.innerHeight;
+
+if(windowHeight<555){
+	scroll.style.visibility = "hidden";	
+}
 
 for(var i=0; i<4; i++){ activeSite.push(false); }
 
 setTimeout(function(){
-	var scroll = document.getElementById("scroll-down")
 	scroll.style.transition = "opacity 1.5s";
 	scroll.style.opacity="1";
 }, 4000);
@@ -78,8 +88,11 @@ function showContent(site){
 	}
 	
 	var portfolio = document.getElementById("contents-text");
+	var siteImg = document.getElementById("contents-img");
+	
 	if (oldSite != null){
 		portfolio.setAttribute("style", "opacity: 0");	
+		siteImg.setAttribute("style", "opacity: 0");
 	}
 
 	switch(site){
@@ -87,24 +100,28 @@ function showContent(site){
 			setTimeout(function(){
 				portfolio.innerHTML = openSpaceDesc;
 				portfolio.setAttribute("style", "opacity: 1");
+				siteImg.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site2":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>Full stack development using MEAN: <br>MongoDB <br>Express <br>Angular <br>Node</p>";
+				portfolio.innerHTML = dingDongDesc;
 				portfolio.setAttribute("style", "opacity: 1");
+				siteImg.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site3":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>Front end redesign</p>";
+				portfolio.innerHTML = fiftyDesc;
 				portfolio.setAttribute("style", "opacity: 1");
+				siteImg.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		case "site4":
 			setTimeout(function(){
-				portfolio.innerHTML = "<p>Front end redesign</p>";
+				portfolio.innerHTML = compostDesc;
 				portfolio.setAttribute("style", "opacity: 1");
+				siteImg.setAttribute("style", "opacity: 1");
 			}, 200);
 			break;
 		default:
