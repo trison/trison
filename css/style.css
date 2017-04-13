@@ -1,31 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-/* line 8, ../sass/style.scss */
+/* line 9, ../sass/style.scss */
 html {
   background-color: none;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 .container {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 body {
   background: linear-gradient(90deg, #fbeeee, white);
-}
-
-/* line 20, ../sass/style.scss */
-body {
   font-family: Open Sans, sans-serif;
   font-size: 20px;
   text-align: center;
 }
-/* line 24, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 body #hero {
   min-height: 630px;
   height: 100vh;
+}
+
+/* line 27, ../sass/style.scss */
+::selection {
+  background-color: #87ff8b;
 }
 
 /* line 30, ../sass/style.scss */
@@ -47,7 +48,7 @@ ul {
   list-style-type: none;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 #card-container {
   width: 365px;
   height: 118px;
@@ -55,7 +56,7 @@ ul {
   margin-top: 6%;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 #card {
   opacity: 0;
   background-color: #fbfbfb;
@@ -72,24 +73,24 @@ ul {
   z-index: 3;
   position: absolute;
 }
-/* line 66, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 #card h1 {
   margin-top: 0;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 #under-card {
   opacity: 0;
   width: 365px;
   height: 118px;
-  background-image: url("../assets/img/jeff.jpg");
+  background-image: url("../assets/img/jeff1.jpg");
   border: 1px solid grey;
   border-radius: 2px;
   position: absolute;
   z-index: 2;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 #about {
   color: #545454;
   text-align: left;
@@ -97,19 +98,19 @@ ul {
   margin-top: 10%;
   height: 300px;
 }
-/* line 88, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #about #hello {
   animation-duration: 0.8s;
   animation-name: slideIn;
 }
-/* line 92, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #about #contact {
   text-align: right;
   animation-duration: 0.8s;
   animation-name: slideIn;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 #scroll-down {
   opacity: 0;
   display: block;
@@ -126,14 +127,14 @@ ul {
   animation: jingle 1s infinite;
   -webkit-animation: jingle 1s infinite;
 }
-/* line 113, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 #scroll-down .glyphicon {
   margin-top: 25%;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #portfolio {
-  background: linear-gradient(90deg, #fff1d1, #fffcf4);
+  background: linear-gradient(90deg, #e1e2ec, #fffcf4);
   padding-top: 3%;
 }
 
@@ -171,14 +172,20 @@ ul {
   color: #545454;
 }
 
-/* line 157, ../sass/style.scss */
-#portfolio-full {
-  margin-top: 5%;
-  height: 500px;
-  border: 1px solid lightgrey;
-  background-color: #e1e2ec;
+/* line 156, ../sass/style.scss */
+.gradient-line {
+  height: 1px;
+  margin-top: 4%;
+  background: linear-gradient(90deg, #e1e2ec, #e1e2ec 50%, #fffcf4);
 }
-/* line 162, ../sass/style.scss */
+
+/* line 161, ../sass/style.scss */
+#portfolio-full {
+  margin-top: 1%;
+  height: 450px;
+  background: linear-gradient(90deg, #e1e2ec, #fffcf4);
+}
+/* line 167, ../sass/style.scss */
 #portfolio-full #contents-text {
   font-size: 80%;
   text-align: left;
@@ -187,18 +194,18 @@ ul {
   opacity: 0;
   transition: opacity 0.2s;
 }
-/* line 170, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 #portfolio-full #contents-text a:hover, #portfolio-full #contents-text a:visited:hover {
   color: orange;
 }
-/* line 175, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 #portfolio-full #contents-img {
   background: url("../assets/img/template.png");
   background-size: 100% 100%;
   height: 338px;
   width: 525px;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: all 0.5s;
 }
 
 @keyframes slideIn {
@@ -229,12 +236,12 @@ ul {
   }
 }
 @media (max-width: 767px) {
-  /* line 206, ../sass/style.scss */
+  /* line 211, ../sass/style.scss */
   #about {
     text-align: center;
     padding: 0 5%;
   }
-  /* line 209, ../sass/style.scss */
+  /* line 214, ../sass/style.scss */
   #about #contact {
     margin-top: 5%;
     text-align: center;

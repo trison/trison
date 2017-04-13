@@ -4,6 +4,7 @@ $font: Open Sans, sans-serif;
 $fontColor: #545454;
 $linkColor: #a97024;
 $bgColor: #fbeeee;
+$highlight: #87ff8b;
 
 html{
 	background-color: none;
@@ -15,9 +16,6 @@ html{
 }
 body{
 	background: linear-gradient(90deg, $bgColor, white);
-}
-
-body{
 	font-family: $font;
 	font-size: 20px;
 	text-align: center;
@@ -26,7 +24,9 @@ body{
 		height: 100vh;
 	}
 }
-
+::selection{
+	background-color: $highlight;
+}
 a, a:visited{
 	color: $linkColor;
 	transition: color 0.2s;
@@ -45,7 +45,6 @@ ul{
 //		display: inline;
 	}
 }
-
 #card-container{
 	width: 365px;
 	height: 118px;
@@ -73,7 +72,7 @@ ul{
 	opacity: 0;
 	width: 365px;
 	height: 118px;
-	background-image: url("../assets/img/jeff.jpg");
+	background-image: url("../assets/img/jeff1.jpg");
 	border: 1px solid grey;
 	border-radius: 2px;
 	position: absolute;
@@ -116,7 +115,8 @@ ul{
 }
 
 #portfolio{
-	background: linear-gradient(90deg, #fff1d1, #fffcf4);
+//	background: linear-gradient(90deg, #fff1d1, #fffcf4);
+	background: linear-gradient(90deg, #e1e2ec, #fffcf4);
 	padding-top: 3%;
 }
 
@@ -153,12 +153,17 @@ ul{
 */
 }
 
-
+.gradient-line{
+	height: 1px;
+	margin-top: 4%;
+	background: linear-gradient(90deg, #e1e2ec, #e1e2ec 50%, #fffcf4)
+}
 #portfolio-full{
-		margin-top: 5%;
-		height: 500px;
-		border: 1px solid lightgrey;
-		background-color: #e1e2ec;
+		margin-top: 1%;
+		height: 450px;
+//		border: 1px solid lightgrey;
+//		background-color: #e1e2ec;
+		background: linear-gradient(90deg, #e1e2ec, #fffcf4);	
 	#contents-text{
 		font-size: 80%;
 		text-align: left;
@@ -178,7 +183,7 @@ ul{
 		height: 338px;
 		width: 525px;
 		opacity: 0;
-		transition: opacity 0.2s;
+		transition: all 0.5s;
 	}
 }
 

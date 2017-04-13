@@ -5,7 +5,7 @@ var activeSite = [];
 
 var openSpaceDesc = "<p>Open Space Arts Society is an artist-run centre in Victoria BC that has been supporting contemporary art practices since 1972. <br><br>I helped develop and launch a website using Drupal. The site received a fresh look with updated functionality that allowed Open Space staff to manage and update their own content. <br><br><a href='http://openspace.ca/' target='_blank'>openspace.ca</a></p>";
 var dingDongDesc = "<p>Ding Dong Delivery was a self-directed, entreprenurial co-op project with one other team member. We set out to create a food ordering and delivery system served through a web app and iOS app. <br><br>My focus was on developing the web app that would allow restaurant owners to manage their online restaurant profiles and incoming orders from the iOS app. I created the API, and developed the backend and frontend using MongoDB, ExpressJS, AngularJS and NodeJS <br><br><a href='http://www.dingdongdelivery.ca/' target='_blank'>www.dingdongdelivery.ca</a></p>";
-var fiftyDesc = "the fifty fifty arts collective is a volunteer-run centre that has focused on emerging art since 2003. <br><br>I worked with the collective to refresh the frontend of the website, while keeping it functional with the original backend system and boilerplate that also supports <a href='https://livevictoria.com/' target='_blank'>livevictoria.com</a> and <a href='https://artsvictoria.ca/' target='_blank'>artsvictoria.ca.</a> <br><br><a href='http://thefiftyfifty.net/' target='_blank'>thefiftyfifty.net</a>";
+var fiftyDesc = "the fifty fifty arts collective is a volunteer-run centre that has focused on emerging art since 2003. <br><br>I worked with the collective to refresh the look of the website, while keeping it functional with the original boilerplate that also supports <a href='https://livevictoria.com/' target='_blank'>livevictoria.com</a> and <a href='https://artsvictoria.ca/' target='_blank'>artsvictoria.ca.</a> <br><br><a href='http://thefiftyfifty.net/' target='_blank'>thefiftyfifty.net</a>";
 var compostDesc = "The Compost Education Centre is a non-profit that provides composting and ecological gardening education in Victoria BC. <br><br>I updated their frontend and added content management features to help staff manage their WordPress site. <br><br><a href='https://www.compost.bc.ca/' target='_blank'>compost.bc.ca</a>";
 
 var scroll = document.getElementById("scroll-down")
@@ -29,13 +29,11 @@ function fade(){
 
 	var underCard = document.getElementById("under-card");
 
-	var num = Math.floor(Math.random()*10+1);
-	if (num > 5){
-		underCard.style.backgroundImage = "url('assets/img/home.jpg')";
-	}
-	else{
-		underCard.style.backgroundImage = "url('assets/img/jeff.jpg')";
-	}
+	var min = 1;
+	var max = 5;
+	var num = Math.floor( Math.random()*(max-min+1)) +min;
+	var url = "url('assets/img/jeff"+num.toString()+".jpg')";
+	underCard.style.backgroundImage = url;
 
 	underCard.style.transition = "opacity 3.5s";
 	underCard.style.opacity = "1";
@@ -60,6 +58,8 @@ function showContent(site){
 	var s = document.getElementById(site);
 	var currSite = null;
 	var oldSite = null;
+	var portfolio = document.getElementById("contents-text");
+	var siteImg = document.getElementById("contents-img");
 
 	switch(site){
 		case 'site1': currSite = 0; break;
@@ -87,12 +87,10 @@ function showContent(site){
 		if (currSite == oldSite){ return; }
 	}
 	
-	var portfolio = document.getElementById("contents-text");
-	var siteImg = document.getElementById("contents-img");
-	
 	if (oldSite != null){
 		portfolio.setAttribute("style", "opacity: 0");	
 		siteImg.setAttribute("style", "opacity: 0");
+//		siteImg.setAttribute("style", "margin-left: 100%");
 	}
 
 	switch(site){
@@ -101,6 +99,7 @@ function showContent(site){
 				portfolio.innerHTML = openSpaceDesc;
 				portfolio.setAttribute("style", "opacity: 1");
 				siteImg.setAttribute("style", "opacity: 1");
+				//siteImg.setAttribute("style", "margin-left: 0");
 			}, 200);
 			break;
 		case "site2":
