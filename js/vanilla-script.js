@@ -3,6 +3,7 @@ window.onload = fade;
 var activeFlag = false;
 var activeSite = [];
 
+var clickBaitDesc = "This was a final project for a course a UVic.<br><br>I was in a group of 4 students that developed a web application that generated clickbait-style article titles. We scraped data from Buzzfeed, and used Python's Natural Language Toolkit Library to make an app that randomly generated titles that aimed to pass has human written. <br><br>See our app and project report <a href='http://web.uvic.ca/~afyshe/dm_projs_012016.html' target='_blank'>here.</a>";
 var openSpaceDesc = "<p>Open Space Arts Society is an artist-run centre in Victoria BC that has been supporting contemporary art practices since 1972. <br><br>I helped develop and launch a website using Drupal. The site received a fresh look with updated functionality that allowed Open Space staff to manage and update their own content. <br><br><a href='http://openspace.ca/' target='_blank'>openspace.ca</a></p>";
 var dingDongDesc = "<p>Ding Dong Delivery was a self-directed, entreprenurial co-op project with one other team member. We set out to create a food ordering and delivery system served through a web app and iOS app. <br><br>My focus was on developing the web app that would allow restaurant owners to manage their online restaurant profiles and incoming orders from the iOS app. I created the API, and developed the backend and frontend using MongoDB, ExpressJS, AngularJS and NodeJS <br><br><a href='http://www.dingdongdelivery.ca/' target='_blank'>www.dingdongdelivery.ca</a></p>";
 var fiftyDesc = "the fifty fifty arts collective is a volunteer-run centre that has focused on emerging art since 2003. <br><br>I worked with the collective to refresh the look of the website, while keeping it functional with the original boilerplate that also supports <a href='https://livevictoria.com/' target='_blank'>livevictoria.com</a> and <a href='https://artsvictoria.ca/' target='_blank'>artsvictoria.ca.</a> <br><br><a href='http://thefiftyfifty.net/' target='_blank'>thefiftyfifty.net</a>";
@@ -46,6 +47,7 @@ function changeValue(site){
 function resetValue(site){
 	var s = document.getElementById(site)
 	switch(site){
+		case 'site0': s.value = "Clickbait Title Generator"; break;
 		case 'site1': s.value = "Open Space"; break;
 		case 'site2': s.value = "Ding Dong Delivery"; break;
 		case 'site3': s.value = "the fifty fifty arts collective"; break;
@@ -62,10 +64,11 @@ function showContent(site){
 	var siteImg = document.getElementById("contents-img");
 
 	switch(site){
-		case 'site1': currSite = 0; break;
-		case 'site2': currSite = 1; break;
-		case 'site3': currSite = 2; break;
-		case 'site4': currSite = 3; break;
+		case 'site0': currSite = 0; break;
+		case 'site1': currSite = 1; break;
+		case 'site2': currSite = 2; break;
+		case 'site3': currSite = 3; break;
+		case 'site4': currSite = 4; break;
 		default: break;
 	}
 
@@ -92,8 +95,15 @@ function showContent(site){
 		siteImg.setAttribute("style", "opacity: 0");
 //		siteImg.setAttribute("style", "margin-left: 100%");
 	}
-
+	console.log("siteeeee "+site);
 	switch(site){
+		case 'site0':
+			setTimeout(function(){
+				portfolio.innerHTML = clickBaitDesc;
+				portfolio.setAttribute("style", "opacity: 1");
+				siteImg.setAttribute("style", "opacity: 1");
+			}, 200);
+			break;
 		case 'site1':
 			setTimeout(function(){
 				portfolio.innerHTML = openSpaceDesc;

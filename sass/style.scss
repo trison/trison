@@ -131,11 +131,11 @@ ul{
 		box-shadow: 1px 1px 1px grey;
 		background-color: #fff1d1;
 		color: $fontColor; 
-		padding: 1%;
+		padding: 0 3%;
 		white-space: normal;
 		margin: 1% 0;
-		width: 200px;
-		height: 134px;
+		width: 175px;
+		height: 100px;
 		transition: background-color 0.3s, color 0.4s;	
 		&:focus{
 //			background-color: white;
